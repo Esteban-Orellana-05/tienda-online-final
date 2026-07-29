@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiendaOnline - Compras Interactivas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <header id="header-principal">
+        <h1 class="logo">TiendaOnline</h1>
+        <p class="slogan">Tu tienda de confianza para compras en línea</p>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="#registro">Registro</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#carrito">Carrito</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="registro">
+            <h2>Registro de Usuario</h2>
+            <p>Regístrate para guardar tus datos antes de comprar.</p>
+
+            <form id="form-registro" class="form-registro" novalidate>
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+                <span class="error" id="error-nombre"></span>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+                <span class="error" id="error-correo"></span>
+
+                <button type="submit" class="btn-enviar">Registrarme</button>
+                <p id="mensaje-registro" class="mensaje-exito"></p>
+            </form>
+        </section>
+
+        <section id="productos">
+            <h2>Nuestros Productos</h2>
+
+            <div class="productos-grid">
+
+                <article class="producto-card">
+                    <img src="https://loremflickr.com/250/180/laptop" alt="Laptop Ultra">
+                    <h3>Laptop Ultra</h3>
+                    <p class="precio">$799.99</p>
+                    <button class="btn-carrito" data-nombre="Laptop Ultra" data-precio="799.99">
+                        Agregar al carrito
+                    </button>
+                </article>
+
+                <article class="producto-card">
+                    <img src="https://loremflickr.com/250/180/headphones" alt="Audífonos Bluetooth">
+                    <h3>Audífonos Bluetooth</h3>
+                    <p class="precio">$49.99</p>
+                    <button class="btn-carrito" data-nombre="Audífonos Bluetooth" data-precio="49.99">
+                        Agregar al carrito
+                    </button>
+                </article>
+
+                <article class="producto-card">
+                    <img src="https://loremflickr.com/250/180/smartwatch" alt="Smartwatch Fit">
+                    <h3>Smartwatch Fit</h3>
+                    <p class="precio">$129.99</p>
+                    <button class="btn-carrito" data-nombre="Smartwatch Fit" data-precio="129.99">
+                        Agregar al carrito
+                    </button>
+                </article>
+
+                <article class="producto-card">
+                    <img src="https://loremflickr.com/250/180/computermouse" alt="Mouse Inalámbrico">
+                    <h3>Mouse Inalámbrico</h3>
+                    <p class="precio">$19.99</p>
+                    <button class="btn-carrito" data-nombre="Mouse Inalámbrico" data-precio="19.99">
+                        Agregar al carrito
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="carrito">
+            <h2>Carrito de Compras</h2>
+
+            <ul id="lista-carrito" class="lista-carrito">
+                <!-- Los productos del carrito se insertan aquí dinámicamente con JS -->
+            </ul>
+
+            <p id="carrito-vacio" class="carrito-vacio">Tu carrito está vacío.</p>
+
+            <div class="carrito-total">
+                <p>Total: <span id="total-carrito">$0.00</span></p>
+            </div>
+
+            <button id="btn-pagar" class="btn-pagar">Pagar</button>
+            <p id="mensaje-compra" class="mensaje-exito"></p>
+        </section>
+
+    </main>
+
+    <footer id="footer-principal">
+        <p>&copy; 2026 TiendaOnline.</p>
+    </footer>
+
+</body>
+
+</html>
