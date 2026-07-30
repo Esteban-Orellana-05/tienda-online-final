@@ -112,7 +112,7 @@ function eliminarDelCarrito(nombre) {
     registrarEventoCarrito("eliminar", nombre, null);
 }
 
- 
+// Registra en Firebase cada interacción relevante del carrito 
 async function registrarEventoCarrito(accion, nombreProducto, precio) {
     try {
         await addDoc(collection(db, "carrito_eventos"), {
@@ -191,7 +191,7 @@ btnPagar.addEventListener("click", async function () {
         console.error("Error al registrar la compra en Firebase:", error);
     }
 
-    
+    // Vacía el carrito
     carrito = [];
     guardarCarrito();
     renderizarCarrito();
